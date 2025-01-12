@@ -12,6 +12,7 @@ public class MaxElement {
 
         approach1(numberList);
         approach2(numberList);
+        approach3(numberList);
 
 
     }
@@ -32,13 +33,13 @@ public class MaxElement {
         maxNumber.ifPresent(System.out::println);
     }
 
-    //    using java 10
-/*    private static void approach1(List<Integer> numberList) {
+//        using java 10
+    private static void approach3(List<Integer> numberList) {
         int maxNumber = numberList.stream()
                 .mapToInt(Integer::intValue)
                 .max()
                 .orElseThrow();
 
         System.out.println(maxNumber);
-    }*/
+    }
 }
