@@ -1,13 +1,12 @@
 package com.java8.stringProgramming;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-public class CountCharectersOccurance {
+public class CountCharactersOccurrence {
 
     public static void main(String[] args) {
         String fruitName = "banana";
@@ -56,8 +55,12 @@ public class CountCharectersOccurance {
     private static void approach4(String name) {
         String[] nameChar = name.split("");
 
-        Map<String, Long> countMap = Arrays.stream(nameChar)
+       /* Map<String, Long> countMap = Arrays.stream(nameChar)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+*/
+        Map<String, Long> countMap = Stream.of(nameChar)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
 
         System.out.println("approach4: "+countMap);
     }
