@@ -27,6 +27,10 @@ public class CountCharactersOccurrence {
                 .mapToObj(ch -> (char) ch)
                 .collect(Collectors.groupingBy(Object::toString, Collectors.counting()));
 
+        Map<Character, Long> countMap12 = fruitName.chars()
+                .mapToObj(ch -> (char) ch)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
        System.out.println("approach1.0: "+countMap);
         System.out.println("approach1.1: "+countMap1);
     }
