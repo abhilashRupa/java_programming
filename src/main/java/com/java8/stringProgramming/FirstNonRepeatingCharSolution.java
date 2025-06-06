@@ -1,4 +1,4 @@
-package com.java8.streams.string;
+package com.java8.stringProgramming;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
