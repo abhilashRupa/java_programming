@@ -40,7 +40,6 @@ public class SecondLargest {
 
         int secondLargest = largest.getSecondLargest(inputArr);
 //        int secondLargest = largest.solution2(inputArr);
-        System.out.println("-----------");
         System.out.println(secondLargest);
 
     }
@@ -51,14 +50,7 @@ public class SecondLargest {
         int secondLargestIndex = inputArr.length - 2;
         boolean isSecondLargestSame = true;
 
-        for (int i : inputArr) {
-            System.out.println(i);
-
-        }
-        System.out.println("-----------------");
-
         while (isSecondLargestSame) {
-            System.out.println(inputArr[secondLargestIndex]);
 
             if (inputArr[secondLargestIndex] == inputArr[0] && inputArr[secondLargestIndex+1] == inputArr[0])
                 return -1;
